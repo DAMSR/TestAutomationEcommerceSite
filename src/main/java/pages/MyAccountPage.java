@@ -1,6 +1,5 @@
 package pages;
 
-import static org.testng.Assert.assertEquals;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -38,9 +37,5 @@ public class MyAccountPage {
 	public void Click_OrderHistoryAndDetails_Button() {
 		OrderHistoryAndDetails_Button.click();
 	}
-	
-	public void Assert_NameOnAccount(String FirstName, String LastName) {
-		String FullName = FirstName + " " + LastName;
-		assertEquals(FullName, NameOnAccount.getText());
-	}
+
 }

@@ -9,8 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class BasePage {
 
 	public int Random_Number_Generator() {
-		int RandNum = (int) (Math.random() * 999 + 100);
-		return RandNum;
+		return (int) (Math.random() * 999 + 100);
 	}
 
 	public int Date_Number_Generator() {
@@ -22,8 +21,7 @@ public class BasePage {
 		int areaCode = (int) (Math.random() * 999 + 100);
 		int firstThree = (int) (Math.random() * 999 + 100);
 		int lastfour = (int) (Math.random() * 9999 + 1000);
-		String PhoneNum = areaCode + " " + firstThree + " " + lastfour;
-		return PhoneNum;
+		return areaCode + " " + firstThree + " " + lastfour;
 	}
 
 	public void SelectFromDropdownByVisibleText(WebElement element, String input) {
