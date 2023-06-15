@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import pages.contactUsPage;
 import pages.mainPage;
-import util.BrowserFactory;
+import util.browserFactory;
 
 /*Test Case - Automate first Menu link and print page title
 
@@ -32,7 +32,7 @@ public class ClickFirstMenuLinkAndPrintPageTitle {
 	//Starting Browser
 	@BeforeMethod
 	public void StartBrowser() {
-		driver = BrowserFactory.LaunchBrowser();
+		driver = browserFactory.launchBrowser();
 	}
 
 	//the actual test
@@ -68,7 +68,7 @@ public class ClickFirstMenuLinkAndPrintPageTitle {
 	// Closing browser
 	@AfterMethod
 	public void CloseBrowser() {
-		BrowserFactory.CloseBrowser();
+		browserFactory.CloseBrowser();
 	}
 
 }

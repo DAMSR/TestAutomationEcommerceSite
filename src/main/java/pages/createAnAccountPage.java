@@ -13,56 +13,56 @@ public class createAnAccountPage extends basePage {
 		this.driver = driver;
 	}
 	
-	@FindBy(how = How.XPATH, using = "//input[@id='id_gender1']") WebElement Mr_RadioButton;
-	@FindBy(how = How.XPATH, using = "//input[@id='customer_firstname']") WebElement FirstName_Field;
-	@FindBy(how = How.XPATH, using = "//input[@id='customer_lastname']") WebElement LastName_Field;
-	@FindBy(how = How.XPATH, using = "//input[@id='passwd']") WebElement Password_Field;
-	@FindBy(how = How.XPATH, using = "//select[@id='days']") WebElement Day_Selection;
-	@FindBy(how = How.XPATH, using = "//select[@id='months']") WebElement Month_Selection;
-	@FindBy(how = How.XPATH, using = "//select[@id='years']") WebElement Year_Selection;
+	@FindBy(how = How.XPATH, using = "//input[@id='id_gender1']") WebElement mrRadioButton;
+	@FindBy(how = How.XPATH, using = "//input[@id='customer_firstname']") WebElement firstNameField;
+	@FindBy(how = How.XPATH, using = "//input[@id='customer_lastname']") WebElement lastNameField;
+	@FindBy(how = How.XPATH, using = "//input[@id='passwd']") WebElement passwordField;
+	@FindBy(how = How.XPATH, using = "//select[@id='days']") WebElement daySelection;
+	@FindBy(how = How.XPATH, using = "//select[@id='months']") WebElement monthSelection;
+	@FindBy(how = How.XPATH, using = "//select[@id='years']") WebElement yearSelection;
 	@FindBy(how = How.XPATH, using = "//input[@id='newsletter']") WebElement Newsletter_CheckBox;
 	@FindBy(how = How.XPATH, using = "//input[@id='optin']") WebElement SpecialOffer_CheckBox;
-	@FindBy(how = How.XPATH, using = "//input[@id='firstname']") WebElement Address_FirstName_Field;
-	@FindBy(how = How.XPATH, using = "//input[@id='lastname']") WebElement Address_LastName_Field;
-	@FindBy(how = How.XPATH, using = "//input[@id='company']") WebElement Address_Company_Field;
-	@FindBy(how = How.XPATH, using = "//input[@id='address1']") WebElement Address1_Field;
-	@FindBy(how = How.XPATH, using = "//input[@id='address2']") WebElement Address2_Field;
-	@FindBy(how = How.XPATH, using = "//input[@id='city']") WebElement City_Field;
-	@FindBy(how = How.XPATH, using = "//select[@id='id_state']") WebElement State_Field;
-	@FindBy(how = How.XPATH, using = "//input[@id='postcode']") WebElement ZipCode_Field;
-	@FindBy(how = How.XPATH, using = "//select[@id='id_country']") WebElement Country_Field;
-	@FindBy(how = How.XPATH, using = "//input[@id='phone_mobile']") WebElement CellPhone_Field;
+	@FindBy(how = How.XPATH, using = "//input[@id='firstname']") WebElement addressFirstNameField;
+	@FindBy(how = How.XPATH, using = "//input[@id='lastname']") WebElement addressLastNameField;
+	@FindBy(how = How.XPATH, using = "//input[@id='company']") WebElement addressCompanyField;
+	@FindBy(how = How.XPATH, using = "//input[@id='address1']") WebElement address1Field;
+	@FindBy(how = How.XPATH, using = "//input[@id='address2']") WebElement address2Field;
+	@FindBy(how = How.XPATH, using = "//input[@id='city']") WebElement cityField;
+	@FindBy(how = How.XPATH, using = "//select[@id='id_state']") WebElement stateField;
+	@FindBy(how = How.XPATH, using = "//input[@id='postcode']") WebElement zipCodeField;
+	@FindBy(how = How.XPATH, using = "//select[@id='id_country']") WebElement countryField;
+	@FindBy(how = How.XPATH, using = "//input[@id='phone_mobile']") WebElement cellPhoneField;
 	@FindBy(how = How.XPATH, using = "//input[@id='alias']") WebElement aliasAddressField;
-	@FindBy(how = How.XPATH, using = "//button[@id='submitAccount']") WebElement Register_Button;
+	@FindBy(how = How.XPATH, using = "//button[@id='submitAccount']") WebElement registerButton;
 	@FindBy(how = How.XPATH, using = "//div[@id=\"center_column\"]/div/p") WebElement errorAlertForMandatoryFieldsDisplayed;
 	
 	public void clickMrRadioButton() {
-		Mr_RadioButton.click();
+		mrRadioButton.click();
 	}
 	
 	public void fillFirstNameField(String FirstName) {
-		FirstName_Field.sendKeys(FirstName);
+		firstNameField.sendKeys(FirstName);
 	}
 	
 	public void fillLastNameField(String LastName) {
-		LastName_Field.sendKeys(LastName);
+		lastNameField.sendKeys(LastName);
 	}
 	
 	public void fillPasswordField(String Password) {
-		Password_Field.sendKeys(Password);
+		passwordField.sendKeys(Password);
 	}
 	
 	public void selectDaySelection(String day) {
 		
-		selectFromDropdownByValue(Day_Selection, removeDecimalPoint(day));
+		selectFromDropdownByValue(daySelection, removeDecimalPoint(day));
 	}
 	
 	public void selectMonthSelection(String month) {
-		selectFromDropdownByValue(Month_Selection, month);
+		selectFromDropdownByValue(monthSelection, month);
 	}
 	
 	public void selectYearSelection(String year) {
-		selectFromDropdownByValue(Year_Selection, removeDecimalPoint(year));
+		selectFromDropdownByValue(yearSelection, removeDecimalPoint(year));
 	}
 	
 	public void clickNewsletterCheckBox() {
@@ -74,39 +74,39 @@ public class createAnAccountPage extends basePage {
 	}
 	
 	public void fillAddressFirstNameField(String aFirstName) {
-		Address_FirstName_Field.sendKeys(aFirstName);
+		addressFirstNameField.sendKeys(aFirstName);
 	}
 	
 	public void fillAddressLastNameField(String aLastName) {
-		Address_LastName_Field.sendKeys(aLastName);
+		addressLastNameField.sendKeys(aLastName);
 	}
 	
 	public void fillAddressCompanyField(String Company) {
-		Address_Company_Field.sendKeys(Company);
+		addressCompanyField.sendKeys(Company);
 	}
 
 	public void fillAddress1Field(String Address) {
-		Address1_Field.sendKeys(Address);
+		address1Field.sendKeys(Address);
 	}
 
 	public void fillCityField(String City) {
-		City_Field.sendKeys(City);
+		cityField.sendKeys(City);
 	}
 
 	public void selectStateField(String State) {
-		selectFromDropdownByVisibleText(State_Field, State);
+		selectFromDropdownByVisibleText(stateField, State);
 	}
 
 	public void fillZipCodeField(String ZipCode) {
-		ZipCode_Field.sendKeys(removeDecimalPoint(ZipCode));
+		zipCodeField.sendKeys(removeDecimalPoint(ZipCode));
 	}
 
 	public void selectCountryField(String Country) {
-		selectFromDropdownByVisibleText(Country_Field, Country);
+		selectFromDropdownByVisibleText(countryField, Country);
 	}
 
 	public void fillCellPhoneField() {
-		CellPhone_Field.sendKeys(phoneNumberGenerator());
+		cellPhoneField.sendKeys(phoneNumberGenerator());
 	}
 	
 	public void fillAliasAddressField(String alias) {
@@ -115,7 +115,7 @@ public class createAnAccountPage extends basePage {
 	}
 
 	public void clickRegisterButton() {
-		Register_Button.click();
+		registerButton.click();
 	}
 
 	public void verifyErrorAlertForMandatoryFields() {

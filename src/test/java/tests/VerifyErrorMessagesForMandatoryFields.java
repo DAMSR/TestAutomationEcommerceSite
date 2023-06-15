@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import pages.createAnAccountPage;
 import pages.loginPage;
 import pages.mainPage;
-import util.BrowserFactory;
+import util.browserFactory;
 
 /*Test Case - Verify error messages for mandatory fields.
 
@@ -26,7 +26,7 @@ public class VerifyErrorMessagesForMandatoryFields {
 
 	@BeforeMethod
 	public void StartBrowser() {
-		driver = BrowserFactory.LaunchBrowser();
+		driver = browserFactory.launchBrowser();
 	}
 
 	@Test
@@ -47,7 +47,7 @@ public class VerifyErrorMessagesForMandatoryFields {
 	// Closing browser
 	@AfterMethod
 	public void CloseBrowser() {
-		BrowserFactory.CloseBrowser();
+		browserFactory.CloseBrowser();
 	}
 
 }

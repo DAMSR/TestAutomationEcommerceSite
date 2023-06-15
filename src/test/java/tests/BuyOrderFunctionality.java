@@ -8,12 +8,12 @@ import org.testng.annotations.Test;
 
 import pages.loginPage;
 import pages.mainPage;
-import pages.MyAccountPage;
+import pages.myAccountPage;
 import pages.OrderPage;
 import pages.productPage;
 import pages.tshirtsPage;
-import util.BrowserFactory;
-import util.ExcelReader;
+import util.browserFactory;
+import util.excelReader;
 
 /*Test Case - Automate End to End Buy Order functionality.
 
@@ -40,14 +40,14 @@ public class BuyOrderFunctionality {
 	// 1. Open link http://automationpractice.com/index.php
 	@BeforeMethod
 	public void StartBrowser() {
-		driver = BrowserFactory.LaunchBrowser();
+		driver = browserFactory.launchBrowser();
 	}
 
 	// The actual Test
 	@Test
 	public void TestBuyOrderFunctionality() throws InterruptedException {
 		
-		ExcelReader reader = new ExcelReader("./data/testdata.xlsx");
+		excelReader reader = new excelReader("./data/testdata.xlsx");
 		String username = reader.getCellData("LoginInfo", "username", 2);
 		String password = reader.getCellData("LoginInfo", "password", 2);
 
@@ -60,7 +60,7 @@ public class BuyOrderFunctionality {
 		LoginP.enterPassword(password);
 		LoginP.clickSigninButton();
 
-		MyAccountPage MyAcc = PageFactory.initElements(driver, MyAccountPage.class);
+		myAccountPage MyAcc = PageFactory.initElements(driver, myAccountPage.class);
 		// 3. Move your cursor over Women's link.
 		MyAcc.hoverOverWomenButton();
 		// 4. Click on sub menu 'T-shirts'.
@@ -100,7 +100,7 @@ public class BuyOrderFunctionality {
 	// Closing browser
 	@AfterMethod
 	public void CloseBrowser() {
-		BrowserFactory.CloseBrowser();
+		browserFactory.CloseBrowser();
 	}
 
 }

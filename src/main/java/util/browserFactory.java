@@ -5,14 +5,14 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class BrowserFactory {
+public class browserFactory {
 	
 	static WebDriver driver;
 	
 	//Open Browser
-	public static WebDriver LaunchBrowser() {
+	public static WebDriver launchBrowser() {
 		
-		ExcelReader reader = new ExcelReader("./data/testdata.xlsx");
+		excelReader reader = new excelReader("./data/testdata.xlsx");
 		String url = reader.getCellData("Sheet2", "url", 2);
 		
 		System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver.exe");

@@ -8,11 +8,11 @@ import org.testng.annotations.Test;
 
 import pages.loginPage;
 import pages.mainPage;
-import pages.MyAccountPage;
+import pages.myAccountPage;
 import pages.productPage;
 import pages.tshirtsPage;
-import util.BrowserFactory;
-import util.ExcelReader;
+import util.browserFactory;
+import util.excelReader;
 
 /*Test Case - Verify that Total Price is reflecting correctly if user changes quantity on 'Shopping Cart Summary' Page.
 Steps to Automate:
@@ -37,13 +37,13 @@ public class CorrectTotalPrice {
 	// 1. Open link http://automationpractice.com/index.php
 	@BeforeMethod
 	public void StartBrowser() {
-		driver = BrowserFactory.LaunchBrowser();
+		driver = browserFactory.launchBrowser();
 	}
 
 	@Test
 	public void TestCorrectTotalPrice() throws InterruptedException {
 
-		ExcelReader reader = new ExcelReader("./data/testdata.xlsx");
+		excelReader reader = new excelReader("./data/testdata.xlsx");
 		String username = reader.getCellData("LoginInfo", "username", 2);
 		String password = reader.getCellData("LoginInfo", "password", 2);
 
@@ -56,7 +56,7 @@ public class CorrectTotalPrice {
 		LoginP.enterPassword(password);
 		LoginP.clickSigninButton();
 
-		MyAccountPage MyAcc = PageFactory.initElements(driver, MyAccountPage.class);
+		myAccountPage MyAcc = PageFactory.initElements(driver, myAccountPage.class);
 		// 3. Move your cursor over Women's link.
 		MyAcc.hoverOverWomenButton();
 		// 4. Click on sub menu 'T-shirts'.
@@ -89,6 +89,6 @@ public class CorrectTotalPrice {
 	// Closing browser
 	@AfterMethod
 	public void CloseBrowser() {
-		BrowserFactory.CloseBrowser();
+		browserFactory.CloseBrowser();
 	}
 }

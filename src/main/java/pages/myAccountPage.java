@@ -6,11 +6,11 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-public class MyAccountPage {
+public class myAccountPage {
 
 	WebDriver driver;
 
-	public MyAccountPage(WebDriver driver) {
+	public myAccountPage(WebDriver driver) {
 		this.driver = driver;
 	}
 
@@ -22,7 +22,7 @@ public class MyAccountPage {
 	@FindBy(how = How.XPATH, using = "//*[@id='center_column']/div/div[1]/ul/li[1]/a")
 	WebElement orderHistoryAndDetailsButton;
 	@FindBy(how = How.XPATH, using = "//a[@class='account']/span")
-	WebElement NameOnAccount;
+	WebElement nameOnAccount;
 
 	//InteractiveMethods
 	public void hoverOverWomenButton() {
@@ -34,7 +34,7 @@ public class MyAccountPage {
 		tshirtsButton.click();
 	}
 
-	public void Click_OrderHistoryAndDetails_Button() {
+	public void clickOrderHistoryAndDetailsButton() {
 		orderHistoryAndDetailsButton.click();
 	}
 

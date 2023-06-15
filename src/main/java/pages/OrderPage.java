@@ -49,7 +49,7 @@ public class OrderPage {
 		iConfirmMyOrderPaymentPage.click();
 	}
 	
-	public void Click_MyAccount_Button() {
+	public void clickMyAccountButton() {
 		myAccountButton.click();
 	}
 	

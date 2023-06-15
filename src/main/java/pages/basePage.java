@@ -20,8 +20,8 @@ public class basePage {
 	public String phoneNumberGenerator() {
 		int areaCode = (int) (Math.random() * 999 + 100);
 		int firstThree = (int) (Math.random() * 999 + 100);
-		int lastfour = (int) (Math.random() * 9999 + 1000);
-		return areaCode + " " + firstThree + " " + lastfour;
+		int i = (int) (Math.random() * 9999 + 1000);
+		return areaCode + " " + firstThree + " " + i;
 	}
 
 	public void selectFromDropdownByVisibleText(WebElement element, String input) {

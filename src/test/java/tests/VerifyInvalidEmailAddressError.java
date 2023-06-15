@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import pages.loginPage;
 import pages.mainPage;
-import util.BrowserFactory;
+import util.browserFactory;
 
 /*Test Case - Verify invalid email address error.
 
@@ -26,7 +26,7 @@ public class VerifyInvalidEmailAddressError {
 	// 1. Open link
 	@BeforeMethod
 	public void StartBrowser() {
-		driver = BrowserFactory.LaunchBrowser();
+		driver = browserFactory.launchBrowser();
 	}
 
 	@Test
@@ -47,7 +47,7 @@ public class VerifyInvalidEmailAddressError {
 	// Closing browser
 	@AfterMethod
 	public void CloseBrowser() {
-		BrowserFactory.CloseBrowser();
+		browserFactory.CloseBrowser();
 	}
 
 }

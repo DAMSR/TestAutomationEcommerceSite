@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import util.BrowserFactory;
+import util.browserFactory;
 
 /*Test Case - Automate User Registration Process
 
@@ -25,13 +25,13 @@ public class UserRegistrationProcess {
 	// Starting browser and navigating to website
 	@BeforeMethod
 	public void StartBrowser() {
-		driver = BrowserFactory.LaunchBrowser();
+		driver = browserFactory.launchBrowser();
 	}
 
 
 	// Closing browser
 	@AfterMethod
 	public void CloseBrowser() {
-		BrowserFactory.CloseBrowser();
+		browserFactory.CloseBrowser();
 	}
 }

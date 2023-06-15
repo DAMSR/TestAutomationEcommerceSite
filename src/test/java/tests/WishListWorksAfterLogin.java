@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import pages.mainPage;
 import pages.tshirtsPage;
-import util.BrowserFactory;
+import util.browserFactory;
 
 /*Test Case - Verify that 'Add to Wishlist' only works after login.
 Steps to Automate:
@@ -25,7 +25,7 @@ public class WishListWorksAfterLogin {
 	//1. Open link http://automationpractice.com/index.php
 	@BeforeMethod
 	public void StartBrowser() {
-		driver = BrowserFactory.LaunchBrowser();
+		driver = browserFactory.launchBrowser();
 	}
 
 	@Test
@@ -50,6 +50,6 @@ public class WishListWorksAfterLogin {
 
 	@AfterMethod
 	public void CloseBrowser() {
-		BrowserFactory.CloseBrowser();
+		browserFactory.CloseBrowser();
 	}
 }
