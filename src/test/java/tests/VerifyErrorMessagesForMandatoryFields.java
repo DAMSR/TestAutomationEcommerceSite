@@ -6,9 +6,9 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import pages.CreateAnAccountPage;
-import pages.LoginPage;
-import pages.MainPage;
+import pages.createAnAccountPage;
+import pages.loginPage;
+import pages.mainPage;
 import util.BrowserFactory;
 
 /*Test Case - Verify error messages for mandatory fields.
@@ -31,16 +31,16 @@ public class VerifyErrorMessagesForMandatoryFields {
 
 	@Test
 	public void TestVerifyErrorMessagesForMandatoryFields() {
-		MainPage mainp = PageFactory.initElements(driver, MainPage.class);
-		mainp.ClickOnSignInButton();
+		mainPage mainp = PageFactory.initElements(driver, mainPage.class);
+		mainp.clickOnSignInButton();
 
-		LoginPage loginp = PageFactory.initElements(driver, LoginPage.class);
+		loginPage loginp = PageFactory.initElements(driver, loginPage.class);
 		loginp.fillCreatAccountEmailField();
 		loginp.clickCreateAnAccountButton();
 
-		CreateAnAccountPage createaccp = PageFactory.initElements(driver, CreateAnAccountPage.class);
+		createAnAccountPage createaccp = PageFactory.initElements(driver, createAnAccountPage.class);
 		createaccp.clickRegisterButton();
-		createaccp.VerifyErrorAlertForMandatoryFields();
+		createaccp.verifyErrorAlertForMandatoryFields();
 
 	}
 

@@ -6,8 +6,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import pages.LoginPage;
-import pages.MainPage;
+import pages.loginPage;
+import pages.mainPage;
 import util.BrowserFactory;
 
 /*Test Case - Verify invalid email address error.
@@ -31,11 +31,11 @@ public class VerifyInvalidEmailAddressError {
 
 	@Test
 	public void TestVerifyInvalidEmailAddressError() {
-		MainPage mainp = PageFactory.initElements(driver, MainPage.class);
+		mainPage mainp = PageFactory.initElements(driver, mainPage.class);
 		// 2. Click on sign in link.
-		mainp.ClickOnSignInButton();
+		mainp.clickOnSignInButton();
 
-		LoginPage loginp = PageFactory.initElements(driver, LoginPage.class);
+		loginPage loginp = PageFactory.initElements(driver, loginPage.class);
 		// 3. Enter invalid email address in the email box and click enter.
 		loginp.fillCreataccountWithinvalidemailField("useremail@yxz");
 		loginp.clickCreateAnAccountButton();

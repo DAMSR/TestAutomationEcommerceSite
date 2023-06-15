@@ -6,7 +6,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import pages.MainPage;
+import pages.mainPage;
 import pages.tshirtsPage;
 import util.BrowserFactory;
 
@@ -31,7 +31,7 @@ public class WishListWorksAfterLogin {
 	@Test
 	public void TestWishListWorksAfterLohin() throws InterruptedException {
 
-		MainPage MainP = PageFactory.initElements(driver, MainPage.class);
+		mainPage MainP = PageFactory.initElements(driver, mainPage.class);
 		// 2. Move your cursor over Women's link.
 		MainP.hoverOverWomenButton();
 		// 3. Click on sub menu 'T-shirts'.

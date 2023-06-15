@@ -14,48 +14,48 @@ public class OrderPage {
 	}
 	
 	//Element Library
-	@FindBy(how = How.XPATH, using = "//div[@id='center_column']/p[2]/a[1]")WebElement ProceedToCheckout_Button;
-	@FindBy(how = How.XPATH, using = "//div[@id='center_column']/form/p/button")WebElement ProceedToCheckout_Button_Address_Page;
-	@FindBy(how = How.XPATH, using = "//form[@id='form']/p/button")WebElement ProceedToCheckout_Button_Shipping_Page;
-	@FindBy(how = How.XPATH, using = "//input[@id='cgv']")WebElement CheckBox_AgreeToTerms_Shipping_Page;
-	@FindBy(how = How.XPATH, using = "//a[@class='bankwire']")WebElement PayByBankWire_Payment_Page;
-	@FindBy(how = How.XPATH, using = "//span[contains(text(),'I confirm my order')]")WebElement IConfirmMyOrder_Payment_Page;
-	@FindBy(how = How.XPATH, using = "//*[@id='header']/div[2]/div/div/nav/div[1]/a")WebElement MyAccount_Button;
-	@FindBy(how = How.XPATH, using = "//p[@class='cheque-indent']/strong[@class='dark']")WebElement Order_Confirmation;
+	@FindBy(how = How.XPATH, using = "//div[@id='center_column']/p[2]/a[1]")WebElement proceedToCheckoutButton;
+	@FindBy(how = How.XPATH, using = "//div[@id='center_column']/form/p/button")WebElement proceedToCheckoutButtonAddressPage;
+	@FindBy(how = How.XPATH, using = "//form[@id='form']/p/button")WebElement proceedToCheckoutButtonShippingPage;
+	@FindBy(how = How.XPATH, using = "//input[@id='cgv']")WebElement checkBoxAgreeToTermsShippingPage;
+	@FindBy(how = How.XPATH, using = "//a[@class='bankwire']")WebElement payByBankWirePaymentPage;
+	@FindBy(how = How.XPATH, using = "//span[contains(text(),'I confirm my order')]")WebElement iConfirmMyOrderPaymentPage;
+	@FindBy(how = How.XPATH, using = "//*[@id='header']/div[2]/div/div/nav/div[1]/a")WebElement myAccountButton;
+	@FindBy(how = How.XPATH, using = "//p[@class='cheque-indent']/strong[@class='dark']")WebElement orderConfirmation;
 	//@FindBy(how = How.XPATH, using = "//div[@class='box']/[6]")WebElement OrderReference_Text;
 	
 	//InteractiveMethods
 	public void clickProceedToCheckout() {
-		ProceedToCheckout_Button.click();
+		proceedToCheckoutButton.click();
 	}
 
 	public void clickProceedToCheckoutAddressPage() {
-		ProceedToCheckout_Button_Address_Page.click();
+		proceedToCheckoutButtonAddressPage.click();
 	}
 
 	public void clickProceedToCheckoutShippingPage() {
-		ProceedToCheckout_Button_Shipping_Page.click();
+		proceedToCheckoutButtonShippingPage.click();
 	}
 
 	public void clickCheckBoxAgreeToTermsShippingPage() {
-		CheckBox_AgreeToTerms_Shipping_Page.click();
+		checkBoxAgreeToTermsShippingPage.click();
 	}
 
 	public void clickPayByBankWirePaymentPage() {
-		PayByBankWire_Payment_Page.click();
+		payByBankWirePaymentPage.click();
 	}
 
 	public void clickIConfirmMyOrderPage() {
-		IConfirmMyOrder_Payment_Page.click();
+		iConfirmMyOrderPaymentPage.click();
 	}
 	
 	public void Click_MyAccount_Button() {
-		MyAccount_Button.click();
+		myAccountButton.click();
 	}
 	
 	public void assertOrderConfirmation() {
 		
-		if(Order_Confirmation.getText().contains("complete")) {
+		if(orderConfirmation.getText().contains("complete")) {
 			System.out.println("Order Verified");
 		}else {
 			System.out.println("Order not completed");

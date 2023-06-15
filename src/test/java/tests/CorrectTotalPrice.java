@@ -6,10 +6,10 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import pages.LoginPage;
-import pages.MainPage;
+import pages.loginPage;
+import pages.mainPage;
 import pages.MyAccountPage;
-import pages.ProductPage;
+import pages.productPage;
 import pages.tshirtsPage;
 import util.BrowserFactory;
 import util.ExcelReader;
@@ -47,11 +47,11 @@ public class CorrectTotalPrice {
 		String username = reader.getCellData("LoginInfo", "username", 2);
 		String password = reader.getCellData("LoginInfo", "password", 2);
 
-		MainPage MainP = PageFactory.initElements(driver, MainPage.class);
-		MainP.ClickOnSignInButton();
+		mainPage MainP = PageFactory.initElements(driver, mainPage.class);
+		MainP.clickOnSignInButton();
 
 		// 2. Login to the website.
-		LoginPage LoginP = PageFactory.initElements(driver, LoginPage.class);
+		loginPage LoginP = PageFactory.initElements(driver, loginPage.class);
 		LoginP.enterEMailAddress(username);
 		LoginP.enterPassword(password);
 		LoginP.clickSigninButton();
@@ -68,7 +68,7 @@ public class CorrectTotalPrice {
 		// 6. 'More' button will be displayed, click on 'More' button.
 		ts.clickMoreButtonProductOne();
 
-		ProductPage ProdP = PageFactory.initElements(driver, ProductPage.class);
+		productPage ProdP = PageFactory.initElements(driver, productPage.class);
 		// 7. Make sure quantity is set to 1.
 		ProdP.enterQuantity("1");
 		// 8. Select size 'L'

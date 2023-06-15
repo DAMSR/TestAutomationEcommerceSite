@@ -6,8 +6,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import pages.ContactUsPage;
-import pages.MainPage;
+import pages.contactUsPage;
+import pages.mainPage;
 import util.BrowserFactory;
 
 /*Test Case - Automate first Menu link and print page title
@@ -39,7 +39,7 @@ public class ClickFirstMenuLinkAndPrintPageTitle {
 	@Test
 	public void ClickFirstMenuLinkAndPrintPageTitleTest() {
 
-		MainPage MainP = PageFactory.initElements(driver, MainPage.class);
+		mainPage MainP = PageFactory.initElements(driver, mainPage.class);
 		// 4. Get the page title and print it.
 		String MainPageTitle = MainP.GetPageTitle();
 		System.out.println(MainPageTitle);
@@ -48,8 +48,8 @@ public class ClickFirstMenuLinkAndPrintPageTitle {
 		MainP.clickTshirtsButton();
 
 		// 6. Get the page title and print it.
-		ContactUsPage contactus = PageFactory.initElements(driver, ContactUsPage.class);
-		String ContactUsPageTitle = contactus.GetPageTitle();
+		contactUsPage contactus = PageFactory.initElements(driver, contactUsPage.class);
+		String ContactUsPageTitle = contactus.getPageTitle();
 		System.out.println(ContactUsPageTitle);
 		// 7. Navigate back to Home Page.
 		driver.navigate().back();

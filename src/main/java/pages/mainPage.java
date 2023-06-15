@@ -6,36 +6,36 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-public class MainPage {
+public class mainPage {
 
 	WebDriver driver;
 
-	public MainPage(WebDriver driver) {
+	public mainPage(WebDriver driver) {
 		this.driver = driver;
 	}
 
 	// Element Library
 	@FindBy(how = How.XPATH, using = "//a[contains(text(), 'Sign in')]")
-	WebElement Sign_in_Button;
+	WebElement signInButton;
 	@FindBy(how = How.XPATH, using = "//a[@title='Women']")
-	WebElement Women_Button;
+	WebElement womenButton;
 	@FindBy(how = How.XPATH, using = "//*[@id=\"block_top_menu\"]/ul/li[1]/ul/li[1]/ul/li[1]/a")
-	WebElement Tshirts_Button;
+	WebElement tshirtsButton;
 	@FindBy(how = How.XPATH, using = "//div/a[@title='Contact Us']")
-	WebElement ContactUs_Button;
+	WebElement contactUsButton;
 
 	// InteractiveMethods
-	public void ClickOnSignInButton() {
-		Sign_in_Button.click();
+	public void clickOnSignInButton() {
+		signInButton.click();
 	}
 	
 	public void hoverOverWomenButton() {
 		Actions actions = new Actions(driver);
-		actions.moveToElement(Women_Button).perform();
+		actions.moveToElement(womenButton).perform();
 	}
 
 	public void clickTshirtsButton() {
-		Tshirts_Button.click();
+		tshirtsButton.click();
 	}
 	
 	public String GetPageTitle() {
@@ -43,7 +43,7 @@ public class MainPage {
 	}
 	
 	public void clickContactUSButtons() {
-		ContactUs_Button.click();
+		contactUsButton.click();
 	}
 
 }
