@@ -25,27 +25,27 @@ public class OrderPage {
 	//@FindBy(how = How.XPATH, using = "//div[@class='box']/[6]")WebElement OrderReference_Text;
 	
 	//InteractiveMethods
-	public void Click_ProceedToCheckout() {
+	public void clickProceedToCheckout() {
 		ProceedToCheckout_Button.click();
 	}
 
-	public void Click_ProceedToCheckout_Address_Page() {
+	public void clickProceedToCheckoutAddressPage() {
 		ProceedToCheckout_Button_Address_Page.click();
 	}
 
-	public void Click_ProceedToCheckout_Shipping_Page() {
+	public void clickProceedToCheckoutShippingPage() {
 		ProceedToCheckout_Button_Shipping_Page.click();
 	}
 
-	public void Click_CheckBox_AgreeToTerms_Shipping_Page() {
+	public void clickCheckBoxAgreeToTermsShippingPage() {
 		CheckBox_AgreeToTerms_Shipping_Page.click();
 	}
 
-	public void Click_PayByBankWire_Payment_Page() {
+	public void clickPayByBankWirePaymentPage() {
 		PayByBankWire_Payment_Page.click();
 	}
 
-	public void Click_IConfirmMyOrder_Page() {
+	public void clickIConfirmMyOrderPage() {
 		IConfirmMyOrder_Payment_Page.click();
 	}
 	
@@ -53,7 +53,7 @@ public class OrderPage {
 		MyAccount_Button.click();
 	}
 	
-	public void Assert_Order_Confirmation() {
+	public void assertOrderConfirmation() {
 		
 		if(Order_Confirmation.getText().contains("complete")) {
 			System.out.println("Order Verified");

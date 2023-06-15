@@ -25,12 +25,12 @@ public class MyAccountPage {
 	WebElement NameOnAccount;
 
 	//InteractiveMethods
-	public void Hover_Over_Women_Button() {
+	public void hoverOverWomenButton() {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(Women_Button).perform();
 	}
 
-	public void Click_Tshirts_Button() {
+	public void clickTshirtsButton() {
 		Tshirts_Button.click();
 	}
 

@@ -106,7 +106,7 @@ public class CreateAnAccountPage extends BasePage {
 	}
 
 	public void Fill_CellPhone_Field() {
-		CellPhone_Field.sendKeys(Phone_Number_Generator());
+		CellPhone_Field.sendKeys(phoneNumberGenerator());
 	}
 	
 	public void Fill_AliasAddress_Field(String alias) {
@@ -114,7 +114,7 @@ public class CreateAnAccountPage extends BasePage {
 		AliasAddress_Field.sendKeys(alias);
 	}
 
-	public void Click_Register_Button() {
+	public void clickRegisterButton() {
 		Register_Button.click();
 	}
 

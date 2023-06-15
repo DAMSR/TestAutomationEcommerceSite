@@ -20,38 +20,38 @@ public class LoginPage extends BasePage{
 	@FindBy(how = How.XPATH, using = "//button[@name='SubmitCreate']") WebElement CreateAnAccount_Button;
 	@FindBy(how = How.XPATH, using = "//input[@id='email_create']") WebElement CreatAccountEmail_Field;
 	@FindBy(how = How.XPATH, using = "//*[@id='create_account_error']") WebElement InvalidEmail_Alert;
-	@FindBy(how = How.XPATH, using = "//div[@id='create_account_error']/ol/li") WebElement InvalidEmail_Alert_Text;
+	@FindBy(how = How.XPATH, using = "//div[@id='create_account_error']/ol/li") WebElement invalidEmailAlertTextDisplayed;
 	
 	//InteractiveMethods
-	public void Enter_EMail_Address(String Email) {
+	public void enterEMailAddress(String Email) {
 		Email_Address_Field.sendKeys(Email);
 	}
 	
-	public void Enter_Password(String Password) {
+	public void enterPassword(String Password) {
 		Password_Field.sendKeys(Password);
 	}
 	
-	public void Click_Signin_Button() {
+	public void clickSigninButton() {
 		SignIn_Button.click();
 	}
 	
-	public void Click_CreateAnAccount_Button() {
+	public void clickCreateAnAccountButton() {
 		CreateAnAccount_Button.click();
 	}
 	
-	public void Fill_CreatAccountEmail_Field() {
-		CreatAccountEmail_Field.sendKeys(Random_Number_Generator() + "." + Random_Number_Generator() + "user@email.com");
+	public void fillCreatAccountEmailField() {
+		CreatAccountEmail_Field.sendKeys(randomNumberGenerator() + "." + randomNumberGenerator() + "user@email.com");
 	}
 
-	public void Fill_CreatAccount_WithInvalidEmail_Field(String email) {
+	public void fillCreataccountWithinvalidemailField(String email) {
 		CreatAccountEmail_Field.sendKeys(email);
 	}
 
-	public void Verify_CreatAccount_WithInvalidEmail_Field() {
+	public void verifyCreataccountWithinvalidemailField() {
 		
-		if(InvalidEmail_Alert_Text.isDisplayed() == true) {
+		if(invalidEmailAlertTextDisplayed.isDisplayed() == true) {
 			System.out.println("Success! Alert for invalid email was displayed");
-			System.out.println(InvalidEmail_Alert_Text.getText());
+			System.out.println(invalidEmailAlertTextDisplayed.getText());
 		}else {
 			System.out.println("Failure, alert for invalid email was not displayed ");
 		}

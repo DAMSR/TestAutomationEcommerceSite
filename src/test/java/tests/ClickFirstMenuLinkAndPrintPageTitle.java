@@ -45,7 +45,7 @@ public class ClickFirstMenuLinkAndPrintPageTitle {
 		System.out.println(MainPageTitle);
 
 		// 5. Now, click on first menu link say "Contact us"
-		MainP.Click_ContactUS_Button();
+		MainP.clickTshirtsButton();
 
 		// 6. Get the page title and print it.
 		ContactUsPage contactus = PageFactory.initElements(driver, ContactUsPage.class);

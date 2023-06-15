@@ -6,11 +6,11 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-public class TshirtsPage {
+public class tshirtsPage {
 	
 	WebDriver driver;
 	
-	public TshirtsPage(WebDriver driver) {
+	public tshirtsPage(WebDriver driver) {
 		this.driver = driver;
 	}
 	
@@ -21,20 +21,20 @@ public class TshirtsPage {
 	@FindBy(how = How.XPATH, using = "//p[@class='fancybox-error']")WebElement wishlist_ErrorBox;
 	
 	//InteractiveMethods
-	public void Hover_Over_Product() {
+	public void hoverOverProduct() {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(Product_Image).perform();
 	}
 	
-	public void Click_More_Button_Product_One() {
+	public void clickMoreButtonProductOne() {
 		More_Button_Product_One.click();
 	}
 	
-	public void Click_wishlistProduct() {
+	public void clickWishlistProduct() {
 		wishlistProduct.click();
 	}
 	
-	public void Verify_wishlist_ErrorBox() {
+	public void verifyWishlistErrorBox() {
 		if(wishlist_ErrorBox.getText().contains("You must be logged in to manage your wishlist.")) {
 			System.out.println("Success! Error message displayed");
 		}else {

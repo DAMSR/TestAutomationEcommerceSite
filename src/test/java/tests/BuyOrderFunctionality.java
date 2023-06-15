@@ -11,7 +11,7 @@ import pages.MainPage;
 import pages.MyAccountPage;
 import pages.OrderPage;
 import pages.ProductPage;
-import pages.TshirtsPage;
+import pages.tshirtsPage;
 import util.BrowserFactory;
 import util.ExcelReader;
 
@@ -56,44 +56,44 @@ public class BuyOrderFunctionality {
 
 		// 2. Login to the website.
 		LoginPage LoginP = PageFactory.initElements(driver, LoginPage.class);
-		LoginP.Enter_EMail_Address(username);
-		LoginP.Enter_Password(password);
-		LoginP.Click_Signin_Button();
+		LoginP.enterEMailAddress(username);
+		LoginP.enterPassword(password);
+		LoginP.clickSigninButton();
 
 		MyAccountPage MyAcc = PageFactory.initElements(driver, MyAccountPage.class);
 		// 3. Move your cursor over Women's link.
-		MyAcc.Hover_Over_Women_Button();
+		MyAcc.hoverOverWomenButton();
 		// 4. Click on sub menu 'T-shirts'.
-		MyAcc.Click_Tshirts_Button();
+		MyAcc.clickTshirtsButton();
 
-		TshirtsPage ts = PageFactory.initElements(driver, TshirtsPage.class);
+		tshirtsPage ts = PageFactory.initElements(driver, tshirtsPage.class);
 		// 5. Mouse hover on the first product displayed.
-		ts.Hover_Over_Product();
+		ts.hoverOverProduct();
 		// 6. 'More' button will be displayed, click on 'More' button.
-		ts.Click_More_Button_Product_One();
+		ts.clickMoreButtonProductOne();
 
 		ProductPage ProdP = PageFactory.initElements(driver, ProductPage.class);
 		// 7. Increase quantity to 2.
-		ProdP.Enter_Quantity("2");
+		ProdP.enterQuantity("2");
 		// 8. Select size 'L'
-		ProdP.Select_Size("L");
+		ProdP.selectSize("L");
 		// 9. Select color.
-		ProdP.Select_Color();
+		ProdP.selectColor();
 		// 10. Click 'Add to Cart' button.
-		ProdP.Click_AddToCart_Button();
+		ProdP.clickAddToCartButton();
 		// 11. Click 'Proceed to checkout' button.
-		ProdP.Click_ProceedToCheckout_Button();
+		ProdP.clickProceedToCheckoutButton();
 
 		// 12. Complete the buy order process till payment.
 		OrderPage OrderP = PageFactory.initElements(driver, OrderPage.class);
-		OrderP.Click_ProceedToCheckout();
-		OrderP.Click_ProceedToCheckout_Address_Page();
-		OrderP.Click_CheckBox_AgreeToTerms_Shipping_Page();
-		OrderP.Click_ProceedToCheckout_Shipping_Page();
-		OrderP.Click_PayByBankWire_Payment_Page();
-		OrderP.Click_IConfirmMyOrder_Page();
+		OrderP.clickProceedToCheckout();
+		OrderP.clickProceedToCheckoutAddressPage();
+		OrderP.clickCheckBoxAgreeToTermsShippingPage();
+		OrderP.clickProceedToCheckoutShippingPage();
+		OrderP.clickPayByBankWirePaymentPage();
+		OrderP.clickIConfirmMyOrderPage();
 		// 13. Make sure that Product is ordered.
-		OrderP.Assert_Order_Confirmation();
+		OrderP.assertOrderConfirmation();
 
 	}
 

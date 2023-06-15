@@ -33,28 +33,28 @@ public class ProductPage extends BasePage {
 	WebElement ProductPrice;
 
 	// InteractiveMethods
-	public void Enter_Quantity(String quantity) {
+	public void enterQuantity(String quantity) {
 		Quantity_Wanted.clear();
 		Quantity_Wanted.sendKeys(quantity);
 	}
 
-	public void Select_Size(String Size) {
+	public void selectSize(String Size) {
 		SelectFromDropdownByVisibleText(Size_Selection, Size);
 	}
 
-	public void Select_Color() {
+	public void selectColor() {
 		Select_Color.click();
 	}
 
-	public void Click_AddToCart_Button() {
+	public void clickAddToCartButton() {
 		AddToCart_Button.click();
 	}
 
-	public void Click_ProceedToCheckout_Button() {
+	public void clickProceedToCheckoutButton() {
 		ProceedToCheckout_Button.click();
 	}
 
-	public void Click_IncreaseQuantity_Button() {
+	public void clickIncreaseQuantityButton() {
 		IncreaseQuantity_Button.click();
 	}
 
@@ -62,7 +62,7 @@ public class ProductPage extends BasePage {
 
 		double DblCurrentTotal = ConvertStringToDouble(TotalProductPrice);
 		
-		Click_IncreaseQuantity_Button();
+		clickIncreaseQuantityButton();
 		
 		double DblProductPrc = ConvertStringToDouble(ProductPrice);
 
